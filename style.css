@@ -1,0 +1,151 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.page {
+    background-color: white;
+    width: 210mm; /* A4 width */
+    min-height: 297mm; /* A4 height */
+    margin: 0 auto;
+    padding: 20mm;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.logo-container img {
+    max-width: 300px;
+    height: auto;
+}
+
+.date-line {
+    font-size: 0.9em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Sections */
+section {
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+h4 {
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    padding: 5px;
+}
+
+.measures-table td:first-child {
+    width: 40%;
+}
+
+.quote-table td {
+    text-align: right;
+}
+
+.quote-table td:first-child {
+    text-align: left;
+}
+
+/* Footer */
+.footer-contact {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* Utilities */
+.small-note {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.page-break {
+    page-break-before: always;
+    height: 50px; /* Visual spacer for web view */
+}
+
+/* Editable highlights for web view */
+[contenteditable="true"]:hover {
+    background-color: #f9f9f9;
+    outline: 1px dashed #ccc;
+}
+
+/* Print / PDF specific styles */
+@media print {
+    body {
+        background-color: white;
+        padding: 0;
+    }
+    .page {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+    }
+    .controls {
+        display: none;
+    }
+    [contenteditable="true"]:hover {
+        background-color: transparent;
+        outline: none;
+    }
+}

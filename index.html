@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto B&B</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="controls">
+        <button onclick="exportPDF()">Exportar a PDF</button>
+    </div>
+
+    <div id="budget-container" class="page">
+        <!-- Header -->
+        <header>
+            <div class="logo-container">
+                <!-- Placeholder for logo, user can replace or we use text if image not available -->
+                <img src="https://via.placeholder.com/300x100?text=B%26B+Logo" alt="B&B Logo" id="logo-img">
+            </div>
+            <div class="date-line">
+                Santiago, <span contenteditable="true">18 de noviembre del 2025</span>
+            </div>
+        </header>
+
+        <h2 class="text-center">PRESUPUESTO N° <span contenteditable="true">4809/2025</span></h2>
+
+        <!-- Client Info -->
+        <section class="client-info">
+            <p>Señor(a): <span contenteditable="true">David Trejo</span></p>
+            <p>Dirección: <span contenteditable="true">Rinconada de los andes</span></p>
+            <p>Contacto: <span contenteditable="true">+56 9 6618 2961</span></p>
+            <br>
+            <p><strong>PRESENTE</strong></p>
+            <p>Estimado(a) por medio del presente hacemos llegar a usted presupuesto solicitado.</p>
+        </section>
+
+        <hr>
+
+        <!-- Technical Inspection -->
+        <section>
+            <h3>INSPECCIÓN TÉCNICA DE OBRA</h3>
+            <p contenteditable="true">Contamos con un profesional calificado que supervisará durante todo el proceso el
+                correcto desarrollo de la obra, reportando directamente al cliente.</p>
+        </section>
+
+        <!-- Previous Works -->
+        <section>
+            <h3>FAENAS PREVIAS</h3>
+            <div contenteditable="true">
+                <p>Acondicionamiento del sitio para inicio de actividades.</p>
+                <p>Movimiento de muebles o equipos domésticos que puedan interferir con el óptimo desarrollo de la obra.
+                </p>
+            </div>
+        </section>
+
+        <!-- Pool Measures -->
+        <section>
+            <h3>MEDIDAS PISCINA</h3>
+            <h4>PISCINA 1</h4>
+            <table class="measures-table">
+                <tr>
+                    <td contenteditable="true">Dimensiones</td>
+                    <td><span contenteditable="true">7,00</span> m x <span contenteditable="true">3,00</span> m</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true">Area (planta)</td>
+                    <td><span contenteditable="true">21,00</span> m2</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true">Profundidad mínima</td>
+                    <td><span contenteditable="true">1,00</span> m</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true">Profundidad máxima</td>
+                    <td><span contenteditable="true">1,70</span> m</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true">Profundidad Promedio</td>
+                    <td><span contenteditable="true">1,35</span> m2</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true">Metros Totales muro y Piso</td>
+                    <td><span contenteditable="true">48,00</span> m2</td>
+                </tr>
+            </table>
+            <p class="small-note">
+                Medidas entregadas por cliente.<br>
+                Estas medidas serán verificadas en terreno y de no coincidir con las especificadas por el cliente se
+                ajustará presupuesto.
+            </p>
+        </section>
+
+        <!-- Footer Contact Info (Page 1) -->
+        <div class="footer-contact">
+            <span>Web: <span contenteditable="true">www.piscinasbyb.cl</span></span>
+            <span>Email: <span contenteditable="true">piscinasbyb@gmail.com</span></span>
+            <span>Instagram: <span contenteditable="true">@bybpiscina</span></span>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Page 2 Content -->
+        <section>
+            <h3>DETALLES TECNICOS DE REVESTIMIENTO EN FIBRA DE VIDRIO</h3>
+            <ul contenteditable="true">
+                <li>Pulido de toda la piscina.</li>
+                <li>Aplicación de revestimiento con color a elección, que corresponde al vaso estanco de la piscina.
+                    Además del sellado perimetral bajo el borde rompeolas más el sello de todos los empotramientos
+                    (skimmer, focos, retornos y aspiraciones de fondo); todo esto realizado con fibra hilo roving y
+                    resina de poliéster.</li>
+                <li>Primer completo de la piscina, realizado con resina ortoftálica.</li>
+                <li>Instalación de fibra de vidrio gramaje 450 impregnadas con resina poliéster (espesor 3mm. aprox.)
+                </li>
+                <li>Dos aplicaciones de GELCOAT (pintura espesor aprox. 0.5mm)</li>
+                <li>Retiro de escombros.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>REVESTIMIENTO EN FIBRA DE VIDRIO</h3>
+            <table class="quote-table">
+                <tr>
+                    <td rowspan="4" style="vertical-align: middle;" contenteditable="true">Revestimiento Fibra de vidrio
+                        m2<br>(Color a elección)</td>
+                    <td rowspan="4" style="vertical-align: middle; text-align: center;"><span contenteditable="true"
+                            id="qty">48</span></td>
+                    <td>$ <span contenteditable="true" id="unit-price">49.990</span></td>
+                    <td>$ <span contenteditable="true" id="subtotal">2.399.520</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TOTAL NETO</strong></td>
+                    <td><strong>$ <span contenteditable="true" id="total-neto">2.399.520</span></strong></td>
+                </tr>
+                <tr>
+                    <td>IVA</td>
+                    <td>$ <span contenteditable="true" id="iva">455.909</span></td>
+                </tr>
+                <tr>
+                    <td><strong>VALOR TOTAL</strong></td>
+                    <td><strong>$ <span contenteditable="true" id="total-final">2.855.429</span></strong></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <p style="color: blue; font-size: 0.9em;" contenteditable="true">Nota: Cualquier reparación extra entre el
+                borde, muros o piso que generen posibles filtraciones ya sean leves o graves se adiciona al monto
+                cotizado.</p>
+            <p><strong>*VALORES NO INCLUYEN DESAGUE DE PISCINA</strong></p>
+        </section>
+
+        <section>
+            <h3>FORMAS DE PAGO</h3>
+            <div contenteditable="true">
+                <p>10% para agendar fecha de inicio.</p>
+                <p>40% el día de inicio de los trabajos</p>
+                <p>50% día de aplicado de revestimiento</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>TRANSFERENCIA ELECTRONICA</h3>
+            <div contenteditable="true" style="color: #2e74b5;">
+                <p><strong>Constructora Y Comercializadora Byb Spa</strong></p>
+                <p>77.050.817-7</p>
+                <p>Banco Santander</p>
+                <p>Cuenta Corriente</p>
+                <p>0-000-9363462-4</p>
+                <p>pagosbyb@gmail.com</p>
+            </div>
+        </section>
+
+        <section>
+            <p><strong>ANTE CUALQUIER CONSULTA COMUNIQUESE DIRECTAMENTE CON OFICINA AL NUMERO Y/O WHATSAPP
+                    +56983146352.</strong></p>
+        </section>
+
+        <!-- Footer Contact Info (Page 2) -->
+        <div class="footer-contact">
+            <span>Web: <span contenteditable="true">www.piscinasbyb.cl</span></span>
+            <span>Email: <span contenteditable="true">piscinasbyb@gmail.com</span></span>
+            <span>Instagram: <span contenteditable="true">@bybpiscina</span></span>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Page 3 Content (Terms & Images) -->
+        <section>
+            <h3>PLAZO DE ENTREGA</h3>
+            <div contenteditable="true">
+                <p>3 a 7 días hábiles desde fecha de inicio (Los días de trabajo dependerán del revestimiento a
+                    elección).</p>
+                <p>Este plazo puede varias por fenómenos climáticos adversos, accidentes o causas externas que impidan a
+                    nuestro personal el óptimo desempeño de sus labores.</p>
+                <br>
+                <p>Se deja constancia que la ejecución del proyecto presupuestado se llevará a cabo en un terreno
+                    nivelado y de fácil acceso.</p>
+            </div>
+
+            <h3>GARANTÍA DE 2 AÑOS* (Trabajos de Pintura no contiene Garantía, ya que el proveedor no la entrega)</h3>
+
+            <p contenteditable="true"><strong>Una vez entregada la obra se debe realizar el pago inmediato del saldo
+                    restante para emitir factura.</strong></p>
+
+            <p contenteditable="true"><strong>Cotización válida por 5 días.</strong></p>
+
+            <br>
+            <p><strong>DISPONIBILIDAD INMEDIATA</strong></p>
+
+            <div style="text-align: right; margin-top: 50px;">
+                <p>Rene Bravo Hernández</p>
+                <p>Representante Legal</p>
+                <p>Piscinas BYB</p>
+            </div>
+        </section>
+
+        <section style="text-align: center; margin-top: 30px;">
+            <h3>EXPERTOS EN REVESTIMIENTO.</h3>
+            <!-- Placeholders for certificates -->
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <img src="https://via.placeholder.com/200x150?text=Certificado+1" alt="Certificado 1">
+                <img src="https://via.placeholder.com/200x150?text=Certificado+2" alt="Certificado 2">
+            </div>
+        </section>
+
+        <!-- Footer Contact Info (Page 3) -->
+        <div class="footer-contact">
+            <span>Web: <span contenteditable="true">www.piscinasbyb.cl</span></span>
+            <span>Email: <span contenteditable="true">piscinasbyb@gmail.com</span></span>
+            <span>Instagram: <span contenteditable="true">@bybpiscina</span></span>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
